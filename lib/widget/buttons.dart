@@ -2,8 +2,10 @@ import 'package:calculator/core/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CalcButtons extends StatelessWidget {
-  final String? value;
-  const CalcButtons({super.key, required this.value});
+  final String value;
+  final Function(String) onTap;
+
+  const CalcButtons({super.key, required this.value, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +19,9 @@ class CalcButtons extends StatelessWidget {
               borderRadius: BorderRadiusGeometry.circular(16),
             ),
           ),
-          onPressed: () {},
+          onPressed: () => onTap(value),
           child: Text(
-            value ?? '',
+            value,
             style: TextStyle(
               fontSize: 50,
               fontWeight: FontWeight.w300,

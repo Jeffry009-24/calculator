@@ -1,36 +1,25 @@
+import 'package:calculator/utils/calculator_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class OperationsScreen extends StatefulWidget {
-  final TextEditingController controller;
-  const OperationsScreen({super.key, required this.controller});
+class OperationsScreen extends StatelessWidget {
+  const OperationsScreen({super.key});
 
-  @override
-  State<OperationsScreen> createState() => _OperationsScreenState();
-}
-
-class _OperationsScreenState extends State<OperationsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 300, bottom: 10, right: 20),
-          child: TextField(
-            controller: widget.controller,
-            cursorColor: Colors.white,
-            showCursor: false,
-            readOnly: true,
-            style: TextStyle(color: Colors.white, fontSize: 50),
-            textDirection: TextDirection.rtl,
-            decoration: InputDecoration(
-              hintText: '0',
-              hintStyle: TextStyle(color: Colors.white),
-              hintTextDirection: TextDirection.rtl,
-              border: InputBorder.none,
-            ),
-          ),
+    final calc = context.watch<CalculatorController>();
+
+    return Container(
+      padding: const EdgeInsets.only(top: 350),
+      alignment: Alignment.centerRight,
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        reverse: true,
+        child: Text(
+          calc.expression,
+          style: const TextStyle(fontSize: 40, color: Colors.white),
         ),
-      ],
+      ),
     );
   }
 }

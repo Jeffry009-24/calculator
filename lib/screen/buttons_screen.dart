@@ -3,8 +3,7 @@ import 'package:calculator/widget/buttons.dart';
 import 'package:flutter/material.dart';
 
 class ButtonsScreen extends StatefulWidget {
-  final Function(String) onButtonPressed;
-  const ButtonsScreen({super.key, required this.onButtonPressed});
+  const ButtonsScreen({super.key});
 
   @override
   State<ButtonsScreen> createState() => _ButtonsScreenState();
@@ -38,10 +37,10 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CalcButtons(value: 'C', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '<-', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '%', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '/', onTap: widget.onButtonPressed),
+                    CalcButtons(value: 'C'),
+                    CalcButtons(value: '<-'),
+                    CalcButtons(value: '%'),
+                    CalcButtons(value: '/'),
                   ],
                 ),
               ),
@@ -56,10 +55,10 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CalcButtons(value: '7', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '8', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '9', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '*', onTap: widget.onButtonPressed),
+                    CalcButtons(value: '7'),
+                    CalcButtons(value: '8'),
+                    CalcButtons(value: '9'),
+                    CalcButtons(value: '*'),
                   ],
                 ),
               ),
@@ -73,10 +72,10 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CalcButtons(value: '4', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '5', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '6', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '-', onTap: widget.onButtonPressed),
+                    CalcButtons(value: '4'),
+                    CalcButtons(value: '5'),
+                    CalcButtons(value: '6'),
+                    CalcButtons(value: '-'),
                   ],
                 ),
               ),
@@ -90,10 +89,10 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CalcButtons(value: '1', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '2', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '3', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '+', onTap: widget.onButtonPressed),
+                    CalcButtons(value: '1'),
+                    CalcButtons(value: '2'),
+                    CalcButtons(value: '3'),
+                    CalcButtons(value: '+'),
                   ],
                 ),
               ),
@@ -107,10 +106,10 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CalcButtons(value: '<>', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '0', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '.', onTap: widget.onButtonPressed),
-                    CalcButtons(value: '=', onTap: widget.onButtonPressed),
+                    CalcButtons(value: '<>'),
+                    CalcButtons(value: '0'),
+                    CalcButtons(value: '.'),
+                    CalcButtons(value: '='),
                   ],
                 ),
               ),

@@ -106,7 +106,7 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    CalcButtons(value: '<>'),
+                    CalcButtons(value: '()'),
                     CalcButtons(value: '0'),
                     CalcButtons(value: '.'),
                     CalcButtons(value: '='),

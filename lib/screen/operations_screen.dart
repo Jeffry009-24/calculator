@@ -1,4 +1,5 @@
 import 'package:calculator/utils/calculator_controller.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -10,7 +11,7 @@ class OperationsScreen extends StatelessWidget {
     final calc = context.watch<CalculatorController>();
 
     return Container(
-      padding: const EdgeInsets.only(top: 350),
+      padding: const EdgeInsets.only(top: 340),
       alignment: Alignment.centerRight,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,

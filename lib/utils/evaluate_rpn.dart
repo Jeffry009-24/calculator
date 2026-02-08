@@ -19,7 +19,6 @@ double evaluateRPN(List<String> rpn) {
 
     final b = stack.removeLast();
     final a = stack.removeLast();
-
     if (token == '/' && b == 0) {
       throw Exception('División entre cero');
     }

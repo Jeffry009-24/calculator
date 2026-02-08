@@ -39,7 +39,9 @@ class CalculatorController extends ChangeNotifier {
 
     if (_expression.isEmpty) {
       _error = CalcError(CalcErrorType.empty, 'Expresion Vacía');
+      _expression = 'Expresión vacía';
       notifyListeners();
+      return;
     }
 
     try {
@@ -47,9 +49,7 @@ class CalculatorController extends ChangeNotifier {
       final rpn = toRPN(tokens);
       final value = evaluateRPN(rpn);
 
-      _result = value.toString();
-
-      _expression = _result!;
+      _expression = value.toString();
     } catch (e) {
       _error = CalcError(CalcErrorType.syntax, e.toString());
     }

@@ -7,8 +7,8 @@ class Operator {
 }
 
 final operators = {
-  '+': Operator('+', 1, (a, b) => a + b),
+  '*': Operator('*', 4, (a, b) => a * b),
+  '/': Operator('/', 3, (a, b) => a / b),
+  '+': Operator('+', 2, (a, b) => a + b),
   '-': Operator('-', 1, (a, b) => a - b),
-  '*': Operator('*', 1, (a, b) => a * b),
-  '/': Operator('/', 1, (a, b) => a / b),
 };

@@ -14,6 +14,8 @@ class CalculatorController extends ChangeNotifier {
   String? get result => _result;
   CalcError? get error => _error;
 
+  List operators = ['+', '-', '*', '/'];
+
   void input(String value) {
     if (value == 'C') {
       _expression = '';
@@ -22,6 +24,13 @@ class CalculatorController extends ChangeNotifier {
       deleteLast();
     } else if (value == '=') {
       evaluate();
+    } else if (_expression.isNotEmpty) {
+      if (operators.contains(_expression[_expression.length - 1]) &&
+          operators.contains(value)) {
+        _expression = _expression.substring(0, _expression.length - 1) + value;
+      } else {
+        _expression += value;
+      }
     } else {
       _expression += value;
     }

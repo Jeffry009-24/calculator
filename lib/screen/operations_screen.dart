@@ -1,5 +1,4 @@
 import 'package:calculator/utils/calculator_controller.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

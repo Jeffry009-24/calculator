@@ -1,11 +1,16 @@
 import 'package:calculator/core/error_type.dart';
 import 'package:calculator/utils/calc_error.dart';
+import 'package:calculator/utils/calc_history.dart';
 import 'package:calculator/utils/evaluate_rpn.dart';
 import 'package:calculator/utils/shuting_yard.dart';
 import 'package:calculator/utils/tokenizer.dart';
 import 'package:flutter/widgets.dart';
 
 class CalculatorController extends ChangeNotifier {
+  CalcHistory history;
+
+  CalculatorController(this.history);
+
   String _expression = '';
   String? _result = '';
   CalcError? _error;
@@ -54,11 +59,18 @@ class CalculatorController extends ChangeNotifier {
     }
 
     try {
+      final originalExpression = _expression;
+
       final tokens = MathTokenizer().tokenize(expression);
       final rpn = toRPN(tokens);
       final value = evaluateRPN(rpn);
 
-      _expression = value.toString();
+      final resultString = value.toString();
+
+      _result = resultString;
+      _expression = resultString;
+
+      history.addOperation('$originalExpression = $result');
     } catch (e) {
       _error = CalcError(CalcErrorType.syntax, e.toString());
     }

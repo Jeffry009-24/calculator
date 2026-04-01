@@ -31,15 +31,15 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                 padding: const EdgeInsets.only(
                   left: 10,
                   right: 10,
-                  top: 10,
-                  bottom: 5,
+                  top: 0,
+                  bottom: 2,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CalcButtons(value: 'C'),
                     CalcButtons(value: '<-'),
-                    CalcButtons(value: '%'),
+                    CalcButtons(value: '%'), // ÷
                     CalcButtons(value: '/'),
                   ],
                 ),
@@ -49,8 +49,8 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                 padding: const EdgeInsets.only(
                   left: 10,
                   right: 10,
-                  top: 10,
-                  bottom: 5,
+                  top: 5,
+                  bottom: 2,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -58,7 +58,7 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                     CalcButtons(value: '7'),
                     CalcButtons(value: '8'),
                     CalcButtons(value: '9'),
-                    CalcButtons(value: '*'),
+                    CalcButtons(value: '*'), // x
                   ],
                 ),
               ),
@@ -66,8 +66,8 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                 padding: const EdgeInsets.only(
                   left: 10,
                   right: 10,
-                  top: 10,
-                  bottom: 5,
+                  top: 5,
+                  bottom: 2,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -83,8 +83,8 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                 padding: const EdgeInsets.only(
                   left: 10,
                   right: 10,
-                  top: 10,
-                  bottom: 5,
+                  top: 5,
+                  bottom: 2,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -100,8 +100,8 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
                 padding: const EdgeInsets.only(
                   left: 10,
                   right: 10,
-                  top: 10,
-                  bottom: 5,
+                  top: 5,
+                  bottom: 2,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
